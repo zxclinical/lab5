@@ -1,0 +1,86 @@
+#logo{
+	width: 75%;
+}
+
+p{
+  margin-bottom: 10px;
+}
+main ol { counter-reset: item }
+main li{ display: block }
+main li:before { content: counters(item, ".") " "; counter-increment: item }
+table {
+	border: 1;
+}
+tr th,td{
+	text-align: center;
+}
+td img{
+	width: 70%;
+}
+td p{
+	margin: 0;
+	padding: 0;
+}
+h2{
+  font-weight: normal;
+}
+h3{
+  font-weight: bold;
+}
+.quote {
+  margin: 20px;
+}
+.rightimg  {
+    float: right;
+    margin: 7px 0 7px 7px;
+    width: 40%;
+   }
+.tabl1 {
+  border: 1px solid lightgrey;
+  background-color: #f6f6f6;
+  padding-top: 5px;
+}
+.contents{
+  border: 1px solid lightgrey;
+  background-color: #f6f6f6;
+  padding-top: 5px;
+  width: 50%;
+  text-align: left;
+}
+.contents p{
+  font-weight: bold;
+  text-align: center;
+}
+.sidenav img {
+	width: 100%;
+}
+.sidenav {
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid lightgrey;
+}
+.sidenav a{
+  padding: 10px 10px 0px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block;
+
+}
+.sidenav p{
+  padding: 10px 10px 0px 20px;
+  font-size: 14px;
+  color: darkgrey;
+ }
+ .sidenav hr{
+ 	margin: 0;
+ 	padding: 0;
+ }
+.sidenav a:hover {
+  color: darkgrey;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

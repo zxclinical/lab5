@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Survey 1</title>
+</head>
+<body>
+	<div class="container wrapper border border-dark">
+		<form id="survey-form">
+			<h1 class="text-center">Health Product Satisfaction Survey</h1>
+			<hr>
+			<div class="form-group">
+				<label for="snumber" class="text-muted">Survey Number</label>
+				<input type="number" id="snumber" class="form-control" placeholder="0000" disabled>
+			</div>
+			<br>
+			<div class="form-group half-width">
+				<label for="sdate">Survey Date</label>
+				<input type="date" id="sdate" class="form-control">
+				<small class="form-text text-muted">Date</small>
+			</div>
+			<br>
+			<div class="form-group half-width">
+				<label for="productName">Health Product Name</label>
+				<input type="text" class="form-control" id="productName" placeholder="Type here...">
+			</div>
+			<br>
+			<p class="mb-0">Type of Health Product</p>
+			<div class="row">
+				<div class="col form-check mx-3">
+					<input class="form-check-input" type="radio" id="phproducts" name="phproducts" value="Pharmaceutical Products">
+					<label for="phproducts"> Pharmaceutical products</label>
+					<br>
+					<input class="form-check-input" type="radio" id="oremedies" name="oremedies" value="Organical Remedies">
+					<label for="oremedies"> Organical Remedies </label>
+					<br>
+					<input class="form-check-input" type="radio" id="habeauty" name="habeauty" value="Health and Beauty">
+					<label for="habeauty"> Health and Beauty</label>
+					<br>
+					<input class="form-check-input" type="radio" id="other" name="other" value="Other">
+					<label for="other">Other</label>
+				</div>
+				<div class="col form-check">
+					<input class="form-check-input" type="radio" id="Suplements" name="Suplements" value="Suplements">
+					<label for="Suplements"> Suplements</label>
+					<br>
+					<input class="form-check-input" type="radio" id="mdevices" name="mdevices" value="Medical devices">
+					<label for="mdevices">Medical devices</label>
+					<br>
+					<input class="form-check-input" type="radio" id="sports" name="sports" value="Sports and Fitness">
+					<label for="sports">Sports and Fitness</label>
+				</div>
+			</div>
+			<br>
+			<div class="form-group">
+				<label for="description">Health Product Description (General purpose)</label>
+				<textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Type here..."></textarea>
+			</div>
+			<br>
+			<p class="mb-0">How would you rate this product?</p>
+			<div class="table-responsive-sm">
+				<table id="satisfaction" class="table">
+					<tr>
+						<td style="background: white;"></td>
+						<th class="table-info">Not Satisfied</th>
+						<th class="table-info">Somewhat satisfied</th>
+						<th class="table-info">Satisfied</th>
+					</tr>
+					<tr>
+						<th class="table-info">Product Quality</th>
+						<td><input name="quality" type="radio" value="notsatisfied"></td>
+						<td><input name="quality" type="radio" value="somewhatsatisfied"></td>
+						<td><input name="quality" type="radio" value="satisfied"></td>
+					</tr>
+					<tr>
+						<th class="table-info">Product design</th>
+						<td><input name="desgin" type="radio" value="notsatisfied"></td>
+						<td><input name="desgin" type="radio" value="somewhatsatisfied"></td>
+						<td><input name="desgin" type="radio" value="satisfied"></td>
+					</tr>
+					<tr>
+						<th class="table-info">Effectiveness</th>
+						<td><input name="effectiveness" type="radio" value="notsatisfied"></td>
+						<td><input name="effectiveness" type="radio" value="somewhatsatisfied"></td>
+						<td><input name="effectiveness" type="radio" value="satisfied"></td>
+					</tr>
+					<tr>
+						<th class="table-info">Easy to use?</th>
+						<td><input name="easytouse" type="radio" value="notsatisfied" ></td>
+						<td><input name="easytouse" type="radio" value="somewhatsatisfied" ></td>
+						<td><input name="easytouse" type="radio" value="satisfied" ></td>
+					</tr>
+					<tr>
+						<th class="table-info">Purchase experience</th>
+						<td><input name="experience" type="radio" value="notsatisfied"></td>
+						<td><input name="experience" type="radio" value="somewhatsatisfied"></td>
+						<td><input name="experience" type="radio" value="satisfied"></td>
+					</tr>
+					<tr>
+						<th class="table-info">Price (SRP)</th>
+						<td><input name="srp" type="radio" value="notsatisfied"></td>
+						<td><input name="srp" type="radio" value="somewhatsatisfied"></td>
+						<td><input name="srp" type="radio" value="satisfied"></td>
+					</tr>
+					<tr>
+						<th class="table-info">Result outcome</th>
+						<td><input name="result" type="radio" value="notsatisfied"></td>
+						<td><input name="result" type="radio" value="somewhatsatisfied"></td>
+						<td><input name="result" type="radio" value="satisfied"></td>
+					</tr>
+					<tr>
+						<th class="table-info">Instructions</th>
+						<td><input name="instructions" type="radio" value="notsatisfied"></td>
+						<td><input name="instructions" type="radio" value="somewhatsatisfied"></td>
+						<td><input name="instructions" type="radio" value="satisfied"></td>
+					</tr>
+					<tr>
+						<th class="table-info">Documentation</th>
+						<td><input name="documentation" type="radio" value="notsatisfied"></td>
+						<td><input name="documentation" type="radio" value="somewhatsatisfied"></td>
+						<td><input name="documentation" type="radio" value="satisfied"></td>
+					</tr>
+					<tr>
+						<th class="table-info">After Purchase Support</th>
+						<td><input name="support" type="radio" value="notsatisfied"></td>
+						<td><input name="support" type="radio" value="somewhatsatisfied"></td>
+						<td><input name="support" type="radio" value="satisfied"></td>
+					</tr>
+					<tr>
+						<th class="table-info">Customer service</th>
+						<td><input name="customerservice" type="radio" value="notsatisfied"></td>
+						<td><input name="customerservice" type="radio" value="somewhatsatisfied"></td>
+						<td><input name="customerservice" type="radio" value="satisfied"></td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<p class="mb-0">Are you going to recommend this to your friends, family or colleagues?</p>
+			<div class="row">
+				<div class="col form-check mx-3">
+					<input class="form-check-input" type="radio" id="definetly" name="wouldyourecommend" value="Definetly">
+					<label for="definetly">Definetly</label>
+					<br>
+					<input class="form-check-input" type="radio" id="nsure" name="wouldyourecommend" value="Not Sure">
+					<label for="nsure">Not Sure</label>
+				</div>
+				<div class="col form-check">
+					<input class="form-check-input" type="radio" id="probably" name="wouldyourecommend" value="Probably">
+					<label for="probably">Probably</label>
+					<br>
+					<input class="form-check-input" type="radio" id="dnot" name="wouldyourecommend" value="Definetly not">
+					<label for="dnot">Definetly not</label>
+				</div>
+			</div>
+			<br>
+			<p class="mb-0">Are you going to buy this product again?</p>
+			<div class="row">
+				<div class="col form-check mx-3">
+					<input class="form-check-input" type="radio" id="yes" name="buyagain" value="Yes">
+					<label for="yes">Yes</label>
+					<br>
+					<input class="form-check-input" type="radio" id="maybe" name="buyagain" value="Maybe">
+					<label for="maybe">Maybe</label>
+				</div>
+				<div class="col form-check">
+					<input class="form-check-input" type="radio" id="no" name="buyagain" value="No">
+					<label for="no">No</label>
+				</div>
+			</div>
+			<br>
+			<div class="form-group half-width">
+				<label for="hlong">How long</label>
+				<input class="form-control" type="text" id="hlong" name="hlong" placeholder="Months, weeks, or days">
+				<small class="form-text text-muted">Months, weeks, or days</small>
+			</div>
+			<br>
+			<p class="mb-0">Are you familiar with the company who created this product</p>
+			<div class="row">
+				<div class="col form-check mx-3">
+					<input class="form-check-input" type="radio" id="famyes" name="familiar" value="Yes">
+					<label for="famyes">Yes</label>
+					<br>
+					<input class="form-check-input" type="radio" id="famno" name="familiar" value="No">
+					<label for="famno">No</label>
+				</div>
+			</div>
+			<br>
+			<div class="form-group">
+				<label for="purchased">Have you purchased any other products from this company? If yes, are you satisfied with it?</label><br>
+				<textarea class="form-control" name="purchased" id="purchased" cols="30" rows="10" placeholder="Type here..."></textarea>
+			</div>
+			<br>
+			<p class="mb-0">Does this product have warranty?</p>
+			<div class="row">
+				<div class="col form-check mx-3">
+					<input class="form-check-input" type="radio" id="warrantyyes" name="warranty" value="Yes">
+					<label for="warrantyyes">Yes</label>
+					<br>
+					<input class="form-check-input" type="radio" id="warrantyno" name="warranty" value="No">
+					<label for="warrantyno">No</label>
+				</div>
+			</div>
+			<br>
+			<div class="form-group half-width">
+				<label for="cost">How much is this product ($)?</label>
+				<input class="form-control" type="Number" name="cost" id="cost" placeholder="Type numbers in here($)">
+			</div>
+			<br>
+			<p class="mb-0">How often do you use this product?</p>
+			<div class="row">
+				<div class="col form-check mx-3">
+					<input class="form-check-input" type="radio" name="howoften" id="monthly">
+					<label for="monthly">Monthly</label>
+					<br>
+					<input class="form-check-input" type="radio" name="howoften" id="daily">
+					<label for="daily">Daily</label>
+					<br>
+					<input class="form-check-input" type="radio" name="howoften" id="never">
+					<label for="never">Never</label>
+				</div>
+				<div class="col form-check">
+					<input class="form-check-input" type="radio" name="howoften" id="weekly">
+					<label for="weekly">Weekly</label>
+					<br>
+					<input class="form-check-input" type="radio" name="howoften" id="rarely">
+					<label for="rarely">Rarely</label>
+				</div>
+			</div>
+			<br>
+			<p class="mb-0">Gender</p>
+			<div class="row">
+				<div class="col form-check mx-3">
+					<input class="form-check-input" type="radio" id="male" name="gender">
+					<label for="male">Male</label>
+					<br>
+					<input class="form-check-input" type="radio" id="female" name="gender">
+					<label for="female">Female</label>
+				</div>
+			</div>
+			<br>
+			<p class="mb-0">Age group</p>
+			<div class="row">
+				<div class="col form-check mx-3">
+					<input class="form-check-input" type="radio" id="kid" name="age">
+					<label for="kid">0-14 years old</label>
+					<br>
+					<input class="form-check-input" type="radio" id="young" name="age">
+					<label for="young">14-24 years old</label>
+				</div>
+				<div class="col form-check">
+					<input class="form-check-input" type="radio" id="adult" name="age">
+					<label for="adult">25-64 years old</label>
+					<br>
+					<input class="form-check-input" type="radio" id="retiree" name="age">
+					<label for="retiree">65 years old and above</label>
+				</div>
+			</div>
+			<br>
+			<div class="form-group half-width">
+				<label for="phone">Participant's phone number</label>
+				<input class="form-control" type="tel" id="phone" name="phone" placeholder="(000)000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+			</div>
+			<br>
+			<div class="form-group half-width">
+				<label for="email">Participant's email</label>
+				<input class="form-control" type="email" id="email" name="email" placeholder="example@example.com">
+				<small class="form-text text-muted">example@example.com</small>
+			</div>
+			<br>
+			<p class="mb-0">Would it be okay if we contact you so that you can further explain your feedback about our product?</p>
+			<div class="row">
+				<div class="col form-check mx-3">
+					<input class="form-check-input" type="radio" id="contactyes" name="contact">
+					<label for="contactyes">Yes</label>
+					<br>
+					<input class="form-check-input" type="radio" id="contactno" name="contact">
+					<label for="contactno">No</label>
+				</div>
+			</div>
+			<br>
+			<p class="mb-0">Would you like to receive updates and promotional emails from us?</p>
+			<select class="form-select" aria-label="Default select example">
+				<option selected>Yes</option>
+				<option value="1">No</option>
+			</select>
+			<hr>
+			<div class="mx-auto" style="width: 100px;">
+				<button type="submit" class="btn btn-success mb-3">Submit</button>
+			</div>
+		</form>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>		
